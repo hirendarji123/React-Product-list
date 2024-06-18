@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import ProductDetail from "./Components/ProductDetail.jsx";
+import ProductListHomePage from "./Components/HomePage.jsx";
+import NavBar from "./Components/Navbar.jsx";
+import ComboOffer from "./Components/ComboOffer.jsx";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // Routing
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <>
+          <NavBar />
+          <ProductListHomePage />
+        </>
+      ),
+    },
+    {
+      path: "/productDetails",
+      element: (
+        <>
+          <NavBar />
+          <ProductDetail />
+        </>
+      ),
+    },
+    {
+      path: "/comboOffer",
+      element: (
+        <>
+          <NavBar />
+          <ComboOffer />
+        </>
+      ),
+    },
+    {
+      path: "*",
+      element: (
+        <>
+          <NavBar />
+          <ProductListHomePage />
+        </>
+      ),
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;

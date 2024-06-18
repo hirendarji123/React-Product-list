@@ -1,0 +1,116 @@
+/* src/components/ComboProduct.css */
+.combo-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .combo-header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #4CAF50;
+  }
+  
+  .combo-header p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .combo-body {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .combo-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .combo-item img {
+    max-width: 150px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .combo-item-details {
+    text-align: center;
+  }
+  
+  .combo-item-details p {
+    margin: 5px 0;
+  }
+  
+  .combo-item-details .original-price {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .combo-item-details .discount {
+    color: #4CAF50;
+  }
+  
+  .plus-sign {
+    font-size: 24px;
+    margin: 0 20px;
+  }
+  
+  .combo-summary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+  }
+  
+  .combo-extra-discount {
+    text-align: center;
+  }
+  
+  .combo-extra-discount .discount-badge {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .combo-price {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .combo-price .offer-price {
+    font-size: 24px;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  .combo-price .original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 10px;
+  }
+  
+  .add-to-cart {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #E64A19;
+  }
+  
